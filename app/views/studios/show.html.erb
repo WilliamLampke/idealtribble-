@@ -1,0 +1,8 @@
+<h1>Studio Show</h1>
+
+<h3>Name: <%= @studio.name %></h3>
+<h3>Location: <%= @studio.location %></h3>
+<h5>Unique Actors: </h5>
+<% @actors.each do |actor|%>
+    <p><%= actor.name %></p>
+<%end%>

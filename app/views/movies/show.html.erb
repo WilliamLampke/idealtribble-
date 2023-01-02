@@ -1,0 +1,12 @@
+<h1>Movie Show </h1>
+
+<h4><%= @movie.title %></h4>
+<h5><%= @movie.creation_year %></h5>
+<h5><%= @movie.genre %></h5>
+<h5>Actors:</h5>
+<% @sorted.each do |actor|%>
+    <p>Name: <%= actor.name %></p>
+    <p>Age: <%= actor.age %></p>
+<%end%>
+<h5>Average Actor Age: <%= @avg %></h5>
+<%= link_to "Add a Actor", "/actors/new?id=#{@movie.id}", method: :get, local: true %>
